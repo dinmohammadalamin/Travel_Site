@@ -1,4 +1,7 @@
 * {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
   font-family: Mulish;
 }
 
@@ -48,6 +51,9 @@ nav .items ul li {
 nav .items ul li:nth-child(1) {
   color: #ff5400;
 }
+.menu {
+  display: none;
+}
 
 /* banner section style */
 
@@ -56,8 +62,133 @@ nav .items ul li:nth-child(1) {
   margin: 50px auto;
   min-height: 500px;
   border-radius: 16px;
-  background:background: linear-gradient(180deg, rgba(19, 19, 24, 0.80) 0%, rgba(19, 19, 24, 0.00) 100%) url(Images/banner.png);
+  background: linear-gradient(
+      180deg,
+      rgba(19, 19, 24, 0.8) 0%,
+      rgba(19, 19, 24, 0) 100%
+    ),
+    url(Images/banner.png);
   background-repeat: no-repeat;
   background-position: center;
   background-size: cover;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 30px;
+}
+.bannaer .title {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+.bannaer .title > h2 {
+  margin: 0 0;
+  color: #fff;
+  font-size: 64px;
+  font-style: normal;
+  font-weight: 800;
+  line-height: normal;
+  text-align: center;
+}
+.bannaer .title > p {
+  max-width: 676px;
+  text-align: center;
+  margin-top: 24px;
+  margin-bottom: 48px;
+  color: #fff;
+  font-size: 16px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 26px; /* 162.5% */
+}
+.explore_input form {
+  max-width: 800px;
+  min-height: 52px;
+  border-radius: 8px;
+  background: rgba(255, 255, 255, 0.3);
+  display: flex;
+  justify-content: center;
+  padding: 15px;
+}
+.explore_input .inside_content {
+  display: flex;
+  gap: 20px;
+  justify-content: center;
+}
+
+.explore_input .inside_content .Where {
+  width: 174px;
+  height: 52px;
+  border-radius: 8px;
+  background: #fff;
+  padding-left: 20px;
+  display: flex;
+  align-items: center;
+}
+.explore_input .inside_content .Where p {
+  color: rgba(19, 19, 24, 0.5);
+  text-align: left;
+  font-size: 16px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: normal;
+}
+.explore_input .inside_content .time,
+.explore_input .inside_content .location {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+.explore_input .inside_content .time select,
+.explore_input .inside_content .location select {
+  width: 174px;
+  height: 52px;
+  border-radius: 8px;
+  background: #fff;
+  color: rgba(19, 19, 24, 0.5);
+  font-size: 16px;
+  font-weight: 400;
+  border: 0;
+  text-align: start;
+  padding-left: 20px;
+  text-align: start;
+  border: none;
+}
+.explore_input .inside_content .btn {
+  color: #fff;
+  text-align: left;
+  font-size: 16px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: normal;
+}
+.explore_input .inside_content .btn button {
+  width: 174px;
+  height: 52px;
+  border-radius: 8px;
+  background: #ff5400;
+  color: #fff;
+  outline: none;
+  border: none;
+  padding: 20px;
+  display: flex;
+  align-items: center;
+  gap: 5px;
+}
+
+/* responsive */
+@media (max-width: 575.98px) {
+  nav .items {
+    display: none;
+  }
+  .menu {
+    display: block;
+  }
+
+  .explore_input .inside_content {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+  }
 }
